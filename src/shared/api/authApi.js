@@ -5,6 +5,5 @@ export const instance = axios.create({
 });
 
 export const loginApi = async (value) => {
-    const { status } = await instance.post("/login/", value);
-    return status;
+    return instance.post("/login/", value);
 };
