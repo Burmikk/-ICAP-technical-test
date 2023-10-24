@@ -1,12 +1,12 @@
-
-import './App.scss';
+import "./App.scss";
+import Login from "./pages/Login/Login";
 
 function App() {
-  return (
-    <div className="App">
-     <h1>First commit</h1>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Login />
+        </div>
+    );
 }
 
 export default App;
