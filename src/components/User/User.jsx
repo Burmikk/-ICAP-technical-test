@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import scss from "./user.module.scss";
-import { selectUsers } from "../../../redux/users/users-selectors";
+import { selectUsers } from "../../redux/users/users-selectors";
 const User = () => {
     const users = useSelector(selectUsers);
 

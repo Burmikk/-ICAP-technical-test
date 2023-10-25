@@ -2,8 +2,8 @@ import { useDispatch, useSelector } from "react-redux";
 import scss from "./table.module.scss";
 import { fetchAllUsers } from "../../redux/users/users-operations";
 import { useEffect } from "react";
-import User from "./User/User";
 import { selectNexPage, selectPrevPage } from "../../redux/users/users-selectors";
+import User from "../../components/User/User";
 const Table = () => {
     const dispatch = useDispatch();
     const nextPage = useSelector(selectNexPage);
@@ -36,9 +36,14 @@ const Table = () => {
                     <User />
                 </tbody>
             </table>
-            {prevPage && <button onClick={handlePrevPage}>Prev</button>}
 
-            {nextPage && <button onClick={handleNextPage}>Next</button>}
+            <button disabled={!prevPage} onClick={handlePrevPage}>
+                Prev
+            </button>
+
+            <button disabled={!nextPage} onClick={handleNextPage}>
+                Next
+            </button>
         </>
     );
 };
